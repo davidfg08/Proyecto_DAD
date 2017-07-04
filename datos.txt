@@ -1,0 +1,19 @@
+Personales
+
+nombre
+apellido 
+sexo
+fecha de nacimiento
+correo
+telefono
+direccion de residencia
+
+academicos
+Nombre de la institucion 
+
+profesionales
+Profesion/Area Profesional  Experiencia
+Empresa  donde  Tiempo
+
+
+Competencias las competencias

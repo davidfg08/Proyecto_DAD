@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+	<title>Proyecto Aplicaciones Distribuidas</title>
+
+	
+
+
+</head>
+<body>
+
+<div class="container bloque">
+
+
+	<div class="panel panel-default">
+       <div class="panel-body">
+		<div class="row">
+				
+			<form method="POST" name="faux" action="Respuesta.php" enctype="multipart/form-data" class="form-horizontal">
+
+				<div class="form-group">
+				
+				<label class="text-center" id="tipotext"><h4><b> Seleccionar una de las 2 opciones para ingresar el texto:</b></h4></label><br>
+				<input type="radio" name="rad" onclick="evaluar(this)" value="write">Escribir en campo de Texto <br>
+				<input type="radio" name="rad" onclick="evaluar(this)" value="upload">Subir archivo .txt
+
+				</div>
+
+				<div  id="opc1" class="form-group" style="display: none;">
+					
+		        	<label class="text-center" id="tipotext"><h4><b> Ingresar Texto:</b></h4></label>
+				      
+				        <textarea class="form-control"  name="texto" ></textarea>
+
+				</div>
+
+			<div  id="opc2" class="form-group" style="display: none;">
+				
+	        	<label class="text-center" id="tipotext"><h4><b> Ingresar Archivo de texto:</b></h4></label> 
+			        <input  type="file" name="archivo" >
+			 </div>
+				
+
+			<div class="form-group">
+			    
+	        	<label class="text-center" id="tipotext"><h4><b> Ingresar palabra a buscar:</b></h4></label>
+			        <input  type="text" class="form-control" name="palabra" required>
+			</div>
+
+			 <div class="form-group">
+			 		<center>
+			        <button type="submit" value="enviar" class="btn btn-success">Realizar Búsqueda</button>
+			        </center>
+			</div>
+
+
+			</form>
+
+		</div>
+
+		</div>
+		</div>
+
+	</div>
+
+
+<script>
+	
+		function evaluar(e){
+
+				if (e.value=="write"){
+
+					document.getElementById('opc1').style.display="block";
+					document.getElementById('opc2').style.display="none";
+					document.faux.rad[1].checked==false; // desactivar upload
+
+				}else{
+
+					if (e.value=="upload") {
+
+						document.getElementById('opc1').style.display="none";
+						document.getElementById('opc2').style.display="block";
+						document.faux.rad[0].checked==false; // desactivar write
+
+					}
+
+				}
+
+		}//   end evaluar
+
+</script>
+
+	
+</body>
+</html>

@@ -1,0 +1,27 @@
+
+
+.bloque >.panel > .panel-body, .resp >.panel > .panel-body{
+
+	padding-left: 100px;
+	padding-right: 100px;
+
+
+}
+
+.bloque, .resp {
+
+	padding-top: 100px;
+
+}
+
+body{
+
+	background-color: #2eb8b8;
+
+}
+
+#pal{
+
+	color: red;
+
+}
